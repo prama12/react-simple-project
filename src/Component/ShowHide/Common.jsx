@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Common = ({ques,ans}) => {
+const Common = ({ ques, ans }) => {
+     const [show, setShow] = useState();
      return (
           <>
                <div>
@@ -9,7 +10,7 @@ const Common = ({ques,ans}) => {
 
                               <span className="mr-5 text-2xl">
 
-                                   <button>
+                                   <button onClick={() => setShow(!show)}>
 
                                         <div>
                                              <svg xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +23,7 @@ const Common = ({ques,ans}) => {
                                         </div>
                                    </button>
                               </span>
-                              {question}
+                              {ques}
                          </h1>
                     </div>
 
