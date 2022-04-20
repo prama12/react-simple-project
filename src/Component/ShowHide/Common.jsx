@@ -38,9 +38,12 @@ const Common = ({ ques, ans }) => {
                          </h1>
                     </div>
 
-                    <div className='bg-yellow-100 font-medium text-lg px-4 py-3'>
-                         <h2>Ans: {ans}</h2>
-                    </div>
+                    {
+                         show ?
+                              <div className='bg-yellow-100 font-medium text-lg px-4 py-3'>
+                                   <h2>Ans: {ans}</h2>
+                              </div> : null
+                    }
                </div>
           </>
      )
