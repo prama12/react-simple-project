@@ -5,12 +5,12 @@ const Common = ({ ques, ans }) => {
      return (
           <>
                <div>
-                    <div className='bg-blue-600 text-white text-lg font-medium px-4 py-3 '>
+                    <div className='bg-blue-600 text-white text-lg font-medium px-4 py-3 cursor-pointer' onClick={() => setShow(!show)}>
                          <h1 className='flex items-center'>
 
                               <span className="mr-5 text-2xl">
 
-                                   <button onClick={() => setShow(!show)}>
+                                   <button>
                                         {
                                              show ?
                                                   <div>
