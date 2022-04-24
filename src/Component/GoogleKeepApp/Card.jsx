@@ -8,11 +8,11 @@ const Card = (props) => {
      return (
           <>
 
-               <div className='bg-white border border-gray-100 shadow-lg pl-5 pr-2 pt-5 pb-2 rounded-md '>
-                    <h1 className='text-gray-600 text-lg font-bold  px-1 py-2' >{props.Title}</h1>
-                    <div className='w-full h-16 px-1 py-2 outline-none text-gray-500 font-medium text-sm'>{props.Content}</div>
+               <div className='bg-blue-900 border border-gray-100 shadow-lg pl-5 pr-2 pt-5 pb-2 rounded-md '>
+                    <h1 className='text-white text-lg font-bold  px-1 py-2' >{props.Title}</h1>
+                    <div className='w-full h-16 px-1 py-2 outline-none text-white font-medium text-sm'>{props.Content}</div>
                     <div className='flex justify-end'>
-                         <button className='text-yellow-400 text-2xl font-black px-2 py-1 rounded-full border border-gray-100 shadow-lg hover:shadow-xl hover:border-2 hover:border-red-500 ' onClick={deleteNote}>
+                         <button className='text-yellow-400 text-2xl font-black px-2 py-1 rounded-full border border-gray-800 bg-white shadow-lg hover:shadow-xl hover:border-2 hover:border-red-500 ' onClick={deleteNote}>
                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" className='h-5'>
                                    <path
                                         fill="red"

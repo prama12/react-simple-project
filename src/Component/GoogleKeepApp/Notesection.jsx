@@ -37,22 +37,23 @@ const Notesection = (props) => {
 
      return (
           <>
-               <div className='h-full flex justify-center items-center py-5 px-12' >
-                    <div className='bg-gray-50 border border-gray-100 shadow-lg pl-5 pr-2 pt-5 pb-2 lg:w-3/12 rounded-md relative' onDoubleClick={normal}>
+               <div className='h-full flex justify-center items-center py-5 px-12' onDoubleClick={normal} >
+                    <div className='bg-blue-900 border border-gray-100 shadow-lg pl-5 pr-2 pt-5 pb-2 lg:w-3/12 rounded-md relative'>
+                         {show ?
+                              <div className='flex  justify-end' >
+                                   <button onClick={() => setShow(!show)} className="text-xs font-semibold hover:text-white text-white hover:shadow-sm hover:bg-red-600 px-1 rounded-full absolute top-1 right-1">X</button>
+                              </div> : null
+                         }
+
                          {
                               show ?
                                    <h1>
-                                        <input className='text-gray-600 text-lg font-bold bg-gray-50 outline-none px-1 py-2' type="text" placeholder='Title' value={note.Title} name="Title" onChange={inputEvent} />
+                                        <input className='text-gray-50 text-lg font-bold bg-blue-900 outline-none px-1 py-2 placeholder:text-gray-50' type="text" placeholder='Title' value={note.Title} name="Title" onChange={inputEvent} />
                                    </h1> : null
                          }
 
-                         {/* <div className='flex  justify-end' >
-                                        <button onClick={() => setShow(!show)} className="text-xs font-semibold hover:text-white text-black hover:shadow-sm hover:bg-red-600 px-1 rounded-full">X</button>
-                                   </div> */}
-
-
                          <div>
-                              <textarea className='w-full bg-gray-50 h-16 px-1 py-2 outline-none text-gray-500 font-medium text-sm' placeholder="Write a Note..." value={note.Content} name="Content" onChange={inputEvent} onClick={expand} />
+                              <textarea className='w-full bg-blue-900  h-16 px-1 py-2 outline-none text-white font-medium text-sm placeholder:text-gray-50' placeholder="Write a Note..." value={note.Content} name="Content" onChange={inputEvent} onClick={expand} />
 
                          </div>
 
