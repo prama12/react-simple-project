@@ -55,9 +55,9 @@ const TicTac = () => {
 
           if (game === 'X') {
                items[num] = 'X';
-               setGame('0');
+               setGame('O');
           } else {
-               items[num] = '0';
+               items[num] = 'O';
                setGame('X');
           }
 
@@ -72,8 +72,8 @@ const TicTac = () => {
      }
 
 
-     const Cell = ({ num , style }) => {
-          return <td className={`${style} border-white text-center w-20 h-20 text-4xl font-black text-white hover:shadow-md shadow-slate-100 cursor-pointer hover:bg-slate-800 rounded-md overflow-hidden `} onClick={() => clickEvent(num)}>{xChance[num]}</td>;
+     const Cell = ({ num, styles }) => {
+          return <td className={`${styles} border-white text-center w-32 h-32 text-8xl font-extrabold text-white hover:shadow-md shadow-slate-100 cursor-pointer hover:bg-slate-800 rounded-md overflow-hidden `} onClick={() => clickEvent(num)}>{xChance[num]}</td>;
      }
 
      return (
@@ -84,23 +84,23 @@ const TicTac = () => {
 
                          <div className='flex justify-center items-center flex-col gap-3'>
                               <h1 className=' font-bold text-4xl text-yellow-400 mb-2'>Turn : {game}</h1>
-                              <table>
-                                   <tr>
-                                        <Cell num={0} style="border-b-4"/>
-                                        <Cell num={1} style="border-x-4"/>
-                                        <Cell num={2} style="border-b-4"/>
+                              <table >
+                                   <tr className='items-center'>
+                                        <Cell num={0} styles="border-b-4" />
+                                        <Cell num={1} styles="border-x-4" />
+                                        <Cell num={2} styles="border-b-4" />
                                    </tr>
 
-                                   <tr>
-                                        <Cell num={3} style="border-r-4"/>
-                                        <Cell num={4} style="border-4"/>
-                                        <Cell num={5} style="border-l-4"/>
+                                   <tr className='items-center'>
+                                        <Cell num={3} styles="border-r-4" />
+                                        <Cell num={4} styles="border-4" />
+                                        <Cell num={5} styles="border-l-4" />
                                    </tr>
 
-                                   <tr>
-                                        <Cell num={6} style="border-t-4"/>
-                                        <Cell num={7} style="border-x-4"/>
-                                        <Cell num={8} style="border-t-4"/>
+                                   <tr className='items-center'>
+                                        <Cell num={6} styles="border-t-4" />
+                                        <Cell num={7} styles="border-x-4" />
+                                        <Cell num={8} styles="border-t-4" />
 
                                    </tr>
                               </table>
@@ -109,13 +109,13 @@ const TicTac = () => {
 
                                    <div className=' mt-3'>
                                         <h1 className='text-red-600 font-bold text-xl'>{win} <span className='text-white'>is the Winner!</span></h1>
-                                        
+
                                    </div>
 
                               )
                               }
                               <div className=' mt-3'>
-                              <button className='border-red-600 text-xs font-bold px-4 py-2 rounded-md overflow-hidden bg-red-600 hover:bg-red-800 text-white ' onClick={() => handleRestart()}>Play Again</button>
+                                   <button className='border-red-600 text-xs font-bold px-4 py-2 rounded-md overflow-hidden bg-red-600 hover:bg-red-800 text-white ' onClick={() => handleRestart()}>Play Again</button>
                               </div>
 
                          </div>
